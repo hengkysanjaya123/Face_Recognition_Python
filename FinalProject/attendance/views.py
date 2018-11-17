@@ -6,13 +6,16 @@ import datetime as dt
 from .detectface import detect
 
 # Create your views here.
+
+# function to redirect to homepage
 def home(request):
     return render(request, 'attendance/homepage.html')
 
+# function to redirect to traindata page
 def traindata(request):
     return render(request, 'attendance/traindata.html')
 
-
+# function to input and display the attendance data
 def doattendance(request):
 
     #read recognition file
@@ -71,6 +74,7 @@ def doattendance(request):
 
     return render(request, 'attendance/doattendance.html', context)
 
+# function to submit the train data and save to database
 def submit(request):
     binusianId = request.POST['binusianid']
     name = request.POST['name']
@@ -85,15 +89,15 @@ def submit(request):
 
     return render(request, 'attendance/response.html')
 
-
+# function to redirect page to response page
 def response(request):
     return render(request, 'attendance/response.html')
 
 
+# function to get the dataset data and display in dataset page
 def dataset(request):
 
     obj = Student.objects.all()
-
 
     context = {
         'data' : obj
