@@ -52,7 +52,7 @@ class ClassSchedule(models.Model):
     endTime = models.TimeField()
 
     def __str__(self):
-        return self.studentID.name + ' # ' + self.classID.name + ' # ' + str(self.date)
+        return self.studentID.name + ' # ' + self.classID.name + ' # ' + str(self.date) + ' # ' + str(self.startTime) + ' - ' + str(self.endTime)
 
     def getStudentID(self):
         return self.studentID
