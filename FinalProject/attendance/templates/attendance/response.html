@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'attendance/bootstrap-4.0.0-dist/css/bootstrap.css' %}">
+<style type="text/css">
+	.center-screen{
+		display : flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		min-height: 100vh;
+	}
+</style>
+<body>
+
+
+<div class="center-screen">
+	<h1>
+		Data Saved Successfully
+	</h1>
+	<a href="{% url 'traindata' %}">Back</a>	
+</div>
+
+
+</body>
+</html>

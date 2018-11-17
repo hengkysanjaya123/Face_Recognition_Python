@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Do Attendance</title>
+</head>
+<script>
+	setTimeout(function(){
+	   window.location.reload(1);
+	}, 5000);
+</script>
+<link rel="stylesheet" type="text/css" href="{% static 'attendance/bootstrap-4.0.0-dist/css/bootstrap.css' %}">
+<style type="text/css">
+	.header{
+		margin-top: 25px;
+		margin-bottom: 25px;
+		width: 100%;
+		height: 50px;
+		/*background: #D968C5;*/
+		text-align: center;
+		/*color : white;*/
+	}
+
+	
+</style>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="header">
+				<h1>Do your attendance here</h1>
+			</div>
+
+			<table class="table">
+                <tr>
+                    <!--<td>No</td>-->
+                    <td>Binusian ID</td>
+                    <td>Name</td>
+                    <td>Login Time</td>
+                </tr>
+
+				{% block content %}
+					{% for i in data %}
+						<tr>
+							<td>{{ i.getStudentID.binusianID }}</td>
+							<td>{{ i.getStudentID.name }}</td>
+							<td>{{ i.getLoginTime }}</td>
+						</tr>
+					{% endfor %}
+				{% endblock %}
+			</table>
+
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

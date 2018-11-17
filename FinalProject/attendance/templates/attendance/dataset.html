@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Do Attendance</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="{% static 'attendance/bootstrap-4.0.0-dist/css/bootstrap.css' %}">
+<style type="text/css">
+
+	body
+	{
+		background: #F7F7F7;
+	}
+	.header{
+		margin-top: 25px;
+		margin-bottom: 25px;
+		width: 100%;
+		height: 50px;
+		/*background: #D968C5;*/
+		text-align: center;
+		/*color : white;*/
+	}
+
+	div.gallery {
+		margin: 5px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 250px;
+		background: white;
+	}
+
+	div.gallery:hover {
+		border: 1px solid #777;
+	}
+
+	div.gallery img {
+		width: 100%;
+		height: auto;
+	}
+
+	div.desc {
+		padding: 15px;
+		text-align: center;
+	}
+
+	
+</style>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="header">
+				<h1>Dataset</h1>
+			</div>
+
+			<div class="col-md-12 row">
+				{% block content %}
+					{% for i in data %}
+
+						<div class="gallery">
+							{% with '/attendance/dataset/'|add:i.getBinusianID|add:'-'|add:i.getName|add:'\1.jpg' as image %}
+								<img src="{% static image %}"/>
+							{% endwith %}
+
+							<div class="desc">
+								<b>{{i.getBinusianID}}</b>
+								<br>
+								{{i.getName}}
+							</div>
+						</div>
+
+					{% endfor %}
+				{% endblock %}
+			</div>
+
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
