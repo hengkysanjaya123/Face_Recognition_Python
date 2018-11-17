@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d245922-3662-4f47-b1e2-df8d0957a7c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FinalProject/Data Report/Project Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/Data Report/Project Report.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/FinalProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/FinalProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/attendance/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/attendance/recognition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/static/attendance/dataset/0000000-Ivan/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/static/attendance/dataset/1111111-Budi/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/static/attendance/dataset/12341212121212-Yoksan/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/static/attendance/dataset/2201852492-Hengky Sanjaya/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/attendance/static/attendance/dataset/2201852492-Hengky Sanjaya/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/temporarydata.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/attendance/temporarydata.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/attendance/detectface.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/attendance/detectface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FinalProject/attendance/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/attendance/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,37 +25,51 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="py" value="11" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="8" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="242" />
+          <entry key="py" value="261" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="242" />
+          <entry key="Python" value="261" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FinalProject/attendance/recognition.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FinalProject/attendance/detectface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="330">
+              <caret line="45" column="49" lean-forward="true" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+              <folding>
+                <element signature="e#1#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FinalProject/attendance/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#1#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,9 +90,10 @@
       <list>
         <option value="$PROJECT_DIR$/FinalProject/attendance/models.py" />
         <option value="$PROJECT_DIR$/FinalProject/FinalProject/settings.py" />
-        <option value="$PROJECT_DIR$/FinalProject/attendance/views.py" />
         <option value="$PROJECT_DIR$/FinalProject/attendance/temporarydata.txt" />
         <option value="$PROJECT_DIR$/FinalProject/attendance/recognition.py" />
+        <option value="$PROJECT_DIR$/FinalProject/attendance/detectface.py" />
+        <option value="$PROJECT_DIR$/FinalProject/attendance/views.py" />
       </list>
     </option>
   </component>
@@ -196,13 +203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/attendance/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="50" column="34" lean-forward="true" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FinalProject/attendance/temporarydata.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -210,20 +210,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/attendance/views.py">
+    <entry file="file://$PROJECT_DIR$/FinalProject/attendance/recognition.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+        <state relative-caret-position="340">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/attendance/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="34" lean-forward="true" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/attendance/detectface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="45" column="49" lean-forward="true" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#1#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/attendance/recognition.py">
+    <entry file="file://$PROJECT_DIR$/FinalProject/attendance/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state>
+          <folding>
+            <element signature="e#1#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,7 +1,4 @@
-import msvcrt
-
 import cv2
-import sys
 import os
 
 
@@ -13,12 +10,10 @@ def detect(id,name):
 	cv2.startWindowThread()
 
 	# Create the haar cascade
-	# print(sys.path)
 	faceCascade = cv2.CascadeClassifier("attendance/haarcascade_frontalface_default.xml")
 
 	# declare value to determine the time and number of pictures
 	n = 1
-	time = 1
 
 	takePicture = True
 	while takePicture:
@@ -49,8 +44,6 @@ def detect(id,name):
 				cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
 			if cv2.waitKey(1) & 0xFF == ord('p'):
-				# # every time mod 45 is zero then increment value and save the frame to image
-				# if time % 45 == 0:
 				# save the frame to image file
 				newPath = 'attendance/static/attendance/dataset/'+ id + '-' + name
 				if not os.path.exists(newPath):
@@ -62,14 +55,6 @@ def detect(id,name):
 				cv2.putText(frame, "Picture saved", (50, 250), font, 1.0, (255, 255, 255), 1)
 
 				takePicture = False
-				# n += 1
-
-				# # draw text to give how many number of picture will be taken
-				# cv2.putText(frame, "Taking "+ str(5 - n) + " picture left", (50,50), font, 1.0, (255,255,255), 1)
-
-				# increase the time value
-				# time += 1
-
 
 		#Display the resulting frame
 		cv2.imshow('frame', frame)
@@ -84,14 +69,3 @@ def detect(id,name):
 	cv2.destroyAllWindows()
 
 	return "Success"
-
-
-# if __name__ == "__main__":
-# 	try:
-# 		arg = sys.argv[0]
-# 		arg2 = sys.argv[1]
-# 	except IndexError:
-# 		arg = None
-# 		arg2 = None
-
-	# detect(arg, arg2)
